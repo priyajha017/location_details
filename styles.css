@@ -1,0 +1,150 @@
+/* Import fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600&family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+
+/* Reset some default styles for cross-browser consistency */
+html, body, h1 {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global styles for the body */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+/* Header styles */
+h1 {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* Styles for the search bar container */
+.searchBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+/* Styles for the location input field */
+#locationInput {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Styles for the search button */
+#searchButton {
+    width: 75%;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Hover styles for the search button */
+#searchButton:hover {
+    background-color: #555;
+}
+
+/* Styles for the location details container */
+#locationDetails {
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 0 auto;
+}
+
+/* Styles for the image container */
+#imageContainer {
+    width: 75vw;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Styles for individual image containers */
+.imgDiv1 {
+    width: 72vw;
+    height: 72vw;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+/* Styles for images inside imgDiv1 */
+.imgDiv1 img {
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    transition: transform 0.2s ease-in-out;
+    border-radius: 5px;
+}
+
+/* Hover styles for images inside imgDiv1 */
+.imgDiv1:hover img {
+    transform: scale(1.1);
+}
+
+/* Styles for the weather container */
+#weatherContainer {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Hide the weather container if it's empty */
+#weatherContainer:empty {
+    display: none;
+}
+
+/* Media query for screens above 600px */
+@media (min-width: 600px) {
+    /* Adjust styles for searchBar in larger screens */
+    .searchBar {
+        flex-direction: row;
+    }
+
+    /* Adjust styles for search button in larger screens */
+    #searchButton {
+        width: 10%;
+    }
+
+    /* Adjust styles for locationDetails in larger screens */
+    #locationDetails {
+        width: 82%;
+    }
+
+    /* Adjust styles for imageContainer in larger screens */
+    #imageContainer {
+        width: 82vw;
+        height: 100%;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    /* Adjust styles for imgDiv1 in larger screens */
+    .imgDiv1 {
+        width: 25vw;
+        height: 25vw;
+    }
+}
